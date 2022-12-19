@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Travel Club</title>
+        <link rel="icon" type="image/png" href="/images/icon.png" />
+        <link rel="stylesheet" href="/src/styles.css" />
+        <script type="module" src="/src/js/allTour.js"></script>
+    </head>
+    <body>
+        <a href="#" class="fixed bottom-2 right-2"
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-10 h-10 text-orange-500"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
+                    clip-rule="evenodd"
+                />
+            </svg>
+        </a>
+
+        <div class="h-48 bg-sky-700">
+            <div class="max-w-5xl m-auto h-full px-2">
+                <div class="flex justify-between items-center py-2.5">
+                    <div class="flex items-center">
+                        <a href="./index.html"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-8 h-8 md:w-10 md:h-10 text-orange-50"
+                            >
+                                <path
+                                    d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z"
+                                />
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </a>
+                        <p
+                            class="text-2xl md:text-4xl font-semibold text-orange-50 pl-px"
+                        >
+                            Travel Club
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <button class="btn-header">Избранное</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white pb-10">
+            <div
+                class="max-w-5xl m-auto h-full relative flex justify-center px-2"
+            >
+                <div
+                    class="border-4 border-orange-400 rounded absolute -top-6 bg-white w-5/6 sm:w-9/12 md:w-3/5 lg:w-2/5 flex"
+                >
+                    <select
+                        class="text-base sm:text-lg px-1 py-1 outline-none font-medium text-sky-700 bg-white w-1/2"
+                        id="list-country"
+                    >
+                        <option>Выбор страны</option>
+                        <option value="Все страны">Все страны</option>
+                        <option value="Египет">Египет</option>
+                        <option value="Индонезия">Индонезия</option>
+                        <option value="Кипр">Кипр</option>
+                        <option value="Мальдивы">Мальдивы</option>
+                        <option value="Мексика">Мексика</option>
+                        <option value="Танзания">Танзания</option>
+                        <option value="Тайланд">Таиланд</option>
+                    </select>
+                    <button
+                        class="btn-search border-l-4 py-1 w-1/2"
+                        id="tour-serch"
+                    >
+                        Поиск тура
+                    </button>
+                </div>
+                <div
+                    class="border-4 border-orange-400 rounded absolute -top-6 bg-white w-5/6 sm:w-9/12 md:w-3/5 lg:w-2/5 flex mt-14"
+                >
+                    <select
+                        class="text-base sm:text-lg px-1 outline-none font-medium text-sky-700 bg-white w-1/2"
+                        id="sort-tours"
+                    >
+                        <option value="Все туры">Все туры</option>
+                        <option value="Возрастание рейтинга">
+                            По возрастанию рейтинга
+                        </option>
+                        <option value="Убывание рейтинга">
+                            По убыванию рейтинга
+                        </option>
+                        <option value="Возрастание цены">
+                            По возрастанию цены
+                        </option>
+                        <option value="Убывание цены">По убыванию цены</option>
+                    </select>
+                    <button
+                        class="btn-search border-l-4 py-1 w-1/2"
+                        id="tour-sort"
+                    >
+                        Сортировать
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white pb-10">
+            <div
+                class="max-w-5xl m-auto gap-5 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-2"
+                id="list-tours"
+            ></div>
+        </div>
+
+        <div class="bg-sky-700">
+            <div
+                class="max-w-5xl m-auto h-full px-2 flex flex-col justify-between text-orange-50"
+            >
+                <div class="flex flex-col pt-5">
+                    <a class="cursor-pointer hover:underline"
+                        >Правила и условия</a
+                    >
+                    <a class="cursor-pointer hover:underline"
+                        >Разрешение споров</a
+                    >
+                    <a class="cursor-pointer hover:underline"
+                        >Как мы работаем</a
+                    >
+                    <a class="cursor-pointer hover:underline"
+                        >Положение о конфиденциальности и cookie</a
+                    >
+                    <a class="cursor-pointer hover:underline"
+                        >Служба поддержки</a
+                    >
+                </div>
+                <div class="grid justify-items-end py-5">
+                    <p>2022–2023 © TRAVEL CLUB</p>
+                    <p>info@travel-club.com</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
