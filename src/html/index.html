@@ -6,9 +6,9 @@
         <title>Travel Club</title>
         <link rel="icon" type="image/png" href="/images/icon.png" />
         <link rel="stylesheet" href="/src/styles.css" />
-
-        <script type="module" src="/src/js/app.js"></script>
+        <script type="module" src="../js/popular.js"></script>
     </head>
+
     <body>
         <div class="h-48 bg-sky-700">
             <div class="max-w-5xl m-auto h-full px-2">
@@ -37,8 +37,14 @@
                             Travel Club
                         </p>
                     </div>
-                    <div class="flex items-center gap-5">
-                        <button class="btn-header">Избранное</button>
+                    <div class="relative">
+                        <a class="btn-header" href="/src/html/favorites.html"
+                            >Избранное</a
+                        >
+                        <p
+                            class="bg-orange-400 rounded-full absolute top-0 right-1 text-xs font-bold text-sky-700 px-1"
+                            id="favorites-count"
+                        ></p>
                     </div>
                 </div>
                 <div class="flex justify-center relative">
@@ -56,78 +62,22 @@
                 <div
                     class="border-4 rounded absolute -top-6 bg-white w-5/6 sm:w-9/12 md:w-3/5 lg:w-2/5 text-center py-1 btn-search"
                 >
-                    <a href="tours.html" class="" id="button-search">
+                    <a
+                        href="tours.html"
+                        class="text-base sm:text-lg md:text-xl"
+                        id="button-search"
+                    >
                         Найти подходящий тур
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-white pb-10">
+        <div class="bg-white mt-8">
             <div class="max-w-5xl m-auto px-2">
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8"
-                    id="list-tours"
-                ></div>
-            </div>
-        </div>
-
-        <div class="bg-white pb-10">
-            <div class="max-w-5xl m-auto px-2">
-                <p class="text-center text-3xl text-sky-700 font-bold">
-                    Самые популярные туры
-                </p>
-                <div class="mt-8" id="popular-tours"></div>
-            </div>
-        </div>
-
-        <div class="bg-white pb-10">
-            <div class="max-w-5xl m-auto px-2">
-                <p class="text-center text-3xl text-sky-700 font-bold pb-8">
-                    Oткройте для себя Азию
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pb-5">
-                    <div class="relative">
-                        <img src="/images/bali.jpeg" class="rounded" />
-                        <div class="absolute top-1 left-2 flex items-center">
-                            <p class="text-2xl text-white font-bold pr-2">
-                                Индонезия
-                            </p>
-                            <img src="/images/icon-bali.png" class="h-8 w-8" />
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img src="/images/thai.jpeg" class="rounded" />
-                        <div class="absolute top-1 left-2 flex items-center">
-                            <p class="text-2xl text-white font-bold pr-2">
-                                Таиланд
-                            </p>
-                            <img src="/images/icon-thai.png" class="h-8 w-8" />
-                        </div>
-                    </div>
-                </div>
-                <div class="relative h-80 w-full pb-10">
-                    <img
-                        src="/images/maldive.jpeg"
-                        class="h-full w-full object-cover object-center rounded"
-                    />
-                    <div class="absolute top-1 left-2 flex items-center">
-                        <p class="text-2xl text-white font-bold pr-2">
-                            Мальдивы
-                        </p>
-                        <img src="/images/icon-maldive.png" class="h-8 w-8" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white pb-10">
-            <div class="max-w-5xl m-auto px-2">
-                <p class="text-center text-3xl text-sky-700 font-bold pb-8">
-                    Акции и спецпредложения
-                </p>
+                <p class="title">Акции и спецпредложения</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div class="relative rounded overflow-hidden">
+                    <div class="relative rounded overflow-hidden h-80">
                         <img
                             src="/images/discount1.jpg"
                             class="h-80 w-full object-cover object-bottom"
@@ -137,26 +87,97 @@
                         ></div>
 
                         <div
-                            class="absolute top-0 bottom-0 left-0 right-0 text-white"
+                            class="absolute top-0 bottom-0 left-0 right-0 text-white flex flex-col justify-center px-2"
                         >
-                            <p class="text-white font-semibold">
-                                «Выгодное начало года»: новый год — новые
-                                поездки
+                            <p
+                                class="font-semibold text-base sm:text-lg md:text-xl"
+                            >
+                                «Выгодное начало года»: новый год —
                             </p>
-                            <p>
+                            <p
+                                class="font-semibold text-base sm:text-lg md:text-xl"
+                            >
+                                новые поездки
+                            </p>
+                            <p class="text-base sm:text-lg">
                                 Сэкономьте от 15% на поездках до 31 марта 2023
                                 года.
                             </p>
-                            <button class="btn-header">
+                            <button class="btn-header w-4/5 sm:w-3/5 mt-2">
                                 Найти предложения
                             </button>
                         </div>
                     </div>
-                    <div>
+                    <div class="relative rounded overflow-hidden h-80">
                         <img
                             src="/images/discount2.jpg"
                             class="rounded h-80 w-full object-cover object-top"
                         />
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 mix-blend-multiply bg-gray-400"
+                        ></div>
+
+                        <div
+                            class="absolute top-0 bottom-0 left-0 right-0 text-white flex flex-col justify-center px-2"
+                        >
+                            <p
+                                class="font-semibold text-base sm:text-lg md:text-xl"
+                            >
+                                Сэкономьте 15% с предложением «Успеть до конца
+                                года»
+                            </p>
+                            <p class="text-base sm:text-lg">
+                                Выберите еще одно место из списка своих желаний
+                                и отправьтесь в путешествие.
+                            </p>
+                            <button class="btn-header w-4/5 sm:w-3/5 mt-2">
+                                Посмотреть предложения
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white mt-12">
+            <div class="max-w-5xl m-auto px-2">
+                <p class="title">Самые популярные туры</p>
+                <div id="popular-tours"></div>
+            </div>
+        </div>
+
+        <div class="bg-white my-12">
+            <div class="max-w-5xl m-auto px-2">
+                <p class="title">Oткройте для себя Азию</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pb-5">
+                    <div class="relative rounded overflow-hidden h-52 lg:h-80">
+                        <img src="/images/bali.jpeg" class="rounded" />
+                        <div class="opacity"></div>
+                        <div class="absolute top-1 left-2 flex items-center">
+                            <a class="country-name"> Индонезия </a>
+                            <img src="/images/icon-bali.png" class="h-8 w-8" />
+                        </div>
+                    </div>
+                    <div class="relative rounded overflow-hidden h-52 lg:h-80">
+                        <img src="/images/thai.jpeg" class="rounded" />
+                        <div class="opacity"></div>
+                        <div class="absolute top-1 left-2 flex items-center">
+                            <p class="country-name">Таиланд</p>
+                            <img src="/images/icon-thai.png" class="h-8 w-8" />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative w-full rounded overflow-hidden h-52 lg:h-80"
+                >
+                    <img
+                        src="/images/maldive.jpeg"
+                        class="h-full w-full object-cover object-center"
+                    />
+                    <div class="opacity"></div>
+                    <div class="absolute top-1 left-2 flex items-center">
+                        <p class="country-name">Мальдивы</p>
+                        <img src="/images/icon-maldive.png" class="h-8 w-8" />
                     </div>
                 </div>
             </div>

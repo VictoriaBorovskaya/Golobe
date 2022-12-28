@@ -1,5 +1,9 @@
 import { format, differenceInDays } from "date-fns"
+import { getFavoriteTours } from "./service.js"
 
+let favoritesArr = getFavoriteTours()
+
+// отрисовка карточек туров
 function renderTour(arr) {
     const listTour = document.getElementById("list-tours")
     listTour.innerHTML = ""
@@ -10,13 +14,16 @@ function renderTour(arr) {
         const endFormat = format(end, "dd.MM.yyyy")
         const amountDays = differenceInDays(end, start)
 
-        let city = tour.city
-        if (tour.city === null) city = ""
+        let favoritesArr = getFavoriteTours()
+        const favoriteTourIds = favoritesArr.map((t) => t.id)
+        const isFavorite = favoriteTourIds.includes(tour.id)
 
         listTour.innerHTML += `
-        <div class="flex flex-col justify-between border-4 rounded border-orange-400 overflow-hidden shadow">
+        <div class="flex flex-col justify-between border-4 rounded border-orange-400 overflow-hidden shadow" id="tour-container">
             <img src="${tour.image}" class='h-60 object-cover' />
-            <p class='font-bold text-center text-lg text-sky-700 py-3'>${tour.hotelName}</p>
+            <p class='font-bold text-center text-lg text-sky-700 py-3 px-2'>${
+                tour.hotelName
+            }</p>
                 <div class="px-2 py-1 flex flex-col justify-end text-sky-900">
                     <div class="flex items-center font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-orange-400 pr-1">
@@ -24,20 +31,28 @@ function renderTour(arr) {
                         </svg>
                         <span>${tour.country}</span>
                         <span class="px-1" aria-hidden="true">&middot;</span>
-                        <span>${city}</span>
+                        <span>${tour.city ?? ""}</span>
                     </div>
-                    <p >Продолжительность тура: <span class="font-semibold">${amountDays} дней</span></p>  
+                    <p >Продолжительность тура: <span class="font-semibold">${amountDays} ночей</span></p>  
                     <p>Свободные даты: <span class="font-semibold">${startFormat} - ${endFormat}</span></p>
-                    <p>Стоимость тура: <span class="font-semibold">${tour.price} ₽</span></p>
+                    <p>Стоимость тура: <span class="font-semibold">${
+                        tour.price
+                    } ₽</span></p>
                 </div>
 
-            <div class="flex gap-3 p-2 my-2">
-                <button class="btn-card">Избранное</button>
-                <button class="btn-card">Подробнее</button>
+            <div class="flex gap-3 p-2 my-2" id="button-container">
+                ${
+                    isFavorite
+                        ? `<button class='btn-card w-1/2' id='remove-to-favorite-${tour.id}'>Удалить из избранного</button>`
+                        : `<button class='btn-card w-1/2' id='add-from-favorite-${tour.id}'>Добавить в избранное</button>`
+                }
+                <button class="btn-card w-1/2">Подробнее</button>
             </div>
             
             <div class="flex justify-end pr-2 pb-2">
-                <p class="text-white font-bold text-sm w-8 bg-sky-700 rounded text-center p-1">${tour.rating}</p>
+                <p class="text-white font-bold text-sm w-8 bg-sky-700 rounded text-center p-1">${
+                    tour.rating
+                }</p>
             <div>
         </div>
      `
