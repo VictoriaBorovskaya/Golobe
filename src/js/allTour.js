@@ -7,6 +7,17 @@ import { getFavoriteTours } from "./service.js"
 let favoritesArr = getFavoriteTours()
 
 async function serchTour() {
+    const listTour = document.getElementById("list-tours")
+    listTour.innerHTML = `
+    <div class="w-full absolute mt-8 flex items-center justify-center flex-col sm:flex-row">
+        <p class="text-lg sm:text-2xl text-sky-700 font-bold text-center pr-2">Пожалуйста, подождите, идет загрузка туров</p> 
+        <div class="w-7 h-7 animate-spin rounded-full bg-gradient-to-r from-sky-700 via-sky-200 to-sky-100 flex items-center justify-center">
+            <div class="bg-white w-5 h-5 rounded-full">
+        </div>
+    </div>
+    </div>
+    `
+    
     const response = await fetch(
         "https://www.bit-by-bit.ru/api/student-projects/tours"
     )
