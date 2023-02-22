@@ -1,8 +1,6 @@
 import renderTour from "./tourCards.js"
-// import { deleteTour } from "./favorites.js"
-import { addCount } from "./service.js"
-import { saveToLocalStorage } from "./service.js"
-import { getFavoriteTours } from "./service.js"
+import { addCount, saveToLocalStorage, getFavoriteTours  } from "./service.js"
+import { closeModal, renderModal } from "./booking.js"
 
 let favoritesArr = getFavoriteTours()
 
@@ -31,6 +29,9 @@ async function serchTour() {
     document
         .getElementById("sort-tours")
         .addEventListener("change", () => sortTour(tours))
+
+    document.getElementById('modal').addEventListener('click', closeModal)
+    document.getElementById('button-close-modal').addEventListener('click', closeModal)
 }
 
 serchTour()
@@ -97,7 +98,13 @@ function forEachButton(arr) {
             .addEventListener("click", () => {
                 addFavorites(tour.id, arr)
             })
-        })
+
+        document
+            .getElementById(`book-tour-${tour.id}`)
+            .addEventListener('click', () => { 
+                renderModal(tour.id, arr)
+        }) 
+    })
 }
 
 // для кнопки удаления из избранного

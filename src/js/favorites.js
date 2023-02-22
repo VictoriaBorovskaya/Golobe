@@ -1,11 +1,8 @@
 import renderTour from "./tourCards.js"
-import { addCount } from "./service.js"
-import { saveToLocalStorage } from "./service.js"
-import { getFavoriteTours } from "./service.js"
+import { addCount, saveToLocalStorage, getFavoriteTours } from "./service.js"
+import { closeModal, renderModal } from "./booking.js"
 
 let favoritesArr = getFavoriteTours()
-showTour(favoritesArr)
-addCount(favoritesArr)
 
 // для кнопки "Удалить"
 function forEachDeleteButton(arr) {
@@ -14,7 +11,13 @@ function forEachDeleteButton(arr) {
             .getElementById(`remove-to-favorite-${tour.id}`)
             .addEventListener("click", () => {
                 deleteTour(tour.id)
-            })
+        })
+
+        document
+            .getElementById(`book-tour-${tour.id}`)
+            .addEventListener('click', () => { 
+                renderModal(tour.id, arr)
+        }) 
     })
 }
 
@@ -36,3 +39,12 @@ function showTour(arr) {
     renderTour(arr)
     forEachDeleteButton(arr)
 }
+
+function initApp() {
+    showTour(favoritesArr)
+    addCount(favoritesArr)
+    document.getElementById('modal').addEventListener('click', closeModal)
+    document.getElementById('button-close-modal').addEventListener('click', closeModal)
+}
+
+initApp()
