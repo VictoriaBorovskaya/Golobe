@@ -37,3 +37,24 @@
 .select {
     @apply text-base sm:text-lg px-1 outline-none font-medium text-sky-700 bg-white w-1/2 sm:w-3/5;
 }
+
+.btn-modal {
+    @apply  text-sky-700 bg-white text-base sm:text-lg md:text-xl font-medium border-2 border-sky-700 rounded px-5 py-1 hover:bg-sky-700 hover:text-white transition-all duration-700;
+}
+
+@media(max-width: 500px) {
+    .modal-image {
+        height: 200px;
+    }
+
+    #error-text {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 375px) {
+    .modal-button {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 7px;
+    }
+}

@@ -46,7 +46,7 @@ function renderTour(arr) {
                         ? `<button class='btn-card w-1/2' id='remove-to-favorite-${tour.id}'>Удалить из избранного</button>`
                         : `<button class='btn-card w-1/2' id='add-from-favorite-${tour.id}'>Добавить в избранное</button>`
                 }
-                <button class="btn-card w-1/2">Подробнее</button>
+                <button class="btn-card w-1/2" id="book-tour-${tour.id}">Забронировать</button>
             </div>
             
             <div class="flex justify-end pr-2 pb-2">
