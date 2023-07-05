@@ -26,8 +26,15 @@ function deleteTour(id) {
 
 // для отрисовки и добавления обработчиков
 function showTour(arr) {
-  renderTour(arr);
-  forEachDeleteButton(arr);
+  if (favoritesArr.length === 0) {
+    const emptyArr = document.getElementById('empty-arr');
+    emptyArr.innerHTML = `
+    <p class="text-lg md:text-xl font-medium">Нет избранных туров</p>
+    `;
+  } else {
+    renderTour(arr);
+    forEachDeleteButton(arr);
+  }
 }
 
 function initApp() {
