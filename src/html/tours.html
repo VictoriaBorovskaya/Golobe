@@ -1,182 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Travel Club</title>
-        <link rel="icon" type="image/png" href="/images/icon.png" />
-        <link rel="stylesheet" href="/src/styles.css" />
-        <script type="module" src="/src/js/allTour.js"></script>
-    </head>
-    <body>
-        <a href="#" class="fixed bottom-2 right-2 z-50"
-            ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="w-10 h-10 text-orange-500"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z"
-                    clip-rule="evenodd"
-                />
-            </svg>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Golobe</title>
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script type="module" src="/src/js/allTour.js"></script>
+  </head>
+  <body>
+    <a href="#" class="fixed bottom-2 right-2 z-40 bg-neutral-100 border border-sky-500 p-2 rounded-xl"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 text-sky-600 m-auto">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+      </svg>
+    </a>
+
+    <div class="h-20 sm:h-16 bg-white shadow-2xl shadow-neutral-700">
+      <div class="max-w-7xl m-auto px-1 sm:px-2 h-full flex sm:items-center justify-between relative">
+        <a href="./tours.html" class="flex items-center gap-1 cursor-pointer relative -bottom-3 sm:bottom-0">
+          <svg viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6">
+            <path
+              d="M8.74733 19.75H7.49952C7.37414 19.75 7.25077 19.7185 7.14069 19.6585C7.03062 19.5984 6.93735 19.5118 6.86941 19.4064C6.80147 19.301 6.76104 19.1803 6.7518 19.0552C6.74257 18.9302 6.76483 18.8048 6.81655 18.6906L9.83811 12.0227L5.30108 11.9219L3.64639 13.9267C3.33092 14.3233 3.07921 14.5 2.43702 14.5H1.59702C1.46402 14.5043 1.33195 14.4764 1.212 14.4188C1.09205 14.3612 0.987757 14.2755 0.907956 14.1691C0.796393 14.0186 0.686706 13.7636 0.793581 13.3998L1.72264 10.0717C1.72967 10.0469 1.73811 10.022 1.74749 9.99766C1.74795 9.99534 1.74795 9.99295 1.74749 9.99063C1.73781 9.96627 1.72951 9.94139 1.72264 9.91609L0.792643 6.56687C0.691862 6.21016 0.802018 5.96078 0.912643 5.81406C0.986929 5.71549 1.08331 5.63573 1.19403 5.58118C1.30475 5.52664 1.42672 5.49883 1.55014 5.5H2.43702C2.91655 5.5 3.38202 5.71516 3.65577 6.0625L5.27624 8.03359L9.83811 7.96609L6.81749 1.30984C6.7657 1.19568 6.74335 1.07036 6.75249 0.945327C6.76163 0.820298 6.80196 0.699555 6.8698 0.594135C6.93764 0.488715 7.03082 0.401982 7.14083 0.341864C7.25083 0.281747 7.37416 0.250163 7.49952 0.25H8.76092C8.9369 0.253536 9.10983 0.29667 9.26685 0.376197C9.42388 0.455724 9.56097 0.569602 9.66796 0.709375L15.5297 7.83438L18.2376 7.76312C18.4359 7.75234 18.9853 7.74859 19.1123 7.74859C21.7026 7.75 23.2495 8.59094 23.2495 10C23.2495 10.4434 23.0723 11.2656 21.8869 11.7887C21.187 12.0981 20.2533 12.2547 19.1114 12.2547C18.9858 12.2547 18.4378 12.2509 18.2367 12.2402L15.5292 12.168L9.65296 19.293C9.54588 19.4321 9.40891 19.5454 9.25216 19.6246C9.0954 19.7037 8.92288 19.7465 8.74733 19.75Z"
+              fill="black" />
+          </svg>
+          <p class="text-sm sm:text-lg font-medium sm:font-semibold">Найти тур</p>
         </a>
+        <a href="./index.html" class="-mx-1"
+          ><img src="/images/Logo-dark.png" alt="logo" class="m-auto scale-75 sm:scale-100"
+        /></a>
+        <a href="./favorites.html" class="flex items-center gap-1 cursor-pointer relative -bottom-3 sm:bottom-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
+            <path
+              d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+          </svg>
+          <p class="text-sm sm:text-lg font-medium sm:font-semibold">Избранное</p>
+        </a>
+        <span class="h-1 rounded bg-cyan-500 w-24 sm:w-32 absolute left-2 bottom-0"></span>
+      </div>
+    </div>
 
-        <div class="h-48 bg-sky-700">
-            <div class="max-w-5xl m-auto h-full px-2">
-                <div class="flex justify-between items-center py-2.5">
-                    <div class="flex items-center">
-                        <a href="./index.html"
-                            ><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                class="w-8 h-8 md:w-10 md:h-10 text-orange-50"
-                            >
-                                <path
-                                    d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z"
-                                />
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                        </a>
-                        <p
-                            class="text-2xl md:text-4xl font-semibold text-orange-50 pl-px"
-                        >
-                            Travel Club
-                        </p>
-                    </div>
-                    <div class="relative">
-                        <a class="btn-header" href="/src/html/favorites.html"
-                            >Избранное</a
-                        >
-                        <p
-                            class="bg-orange-400 rounded-full absolute top-0 right-1 text-xs font-bold text-sky-700 px-1"
-                            id="favorites-count"
-                        ></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="bg-neutral-100 pt-16 pb-8 px-2">
+      <div class="max-w-5xl m-auto bg-white shadow-md p-5 rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <fieldset class="border border-neutral-500 rounded p-1">
+          <legend class="px-1 text-sm -mb-1">Страна</legend>
+          <select class="outline-none w-full py-0.5" id="list-country">
+            <option value="Все страны">Все страны</option>
+            <option value="Египет">Египет</option>
+            <option value="Индонезия">Индонезия</option>
+            <option value="Кипр">Кипр</option>
+            <option value="Мальдивы">Мальдивы</option>
+            <option value="Мексика">Мексика</option>
+            <option value="Танзания">Танзания</option>
+            <option value="Тайланд">Таиланд</option>
+          </select>
+        </fieldset>
+        <fieldset class="border border-neutral-500 rounded p-1">
+          <legend class="px-1 text-sm -mb-1">Сортировка</legend>
+          <select class="outline-none w-full h-full py-0.5" id="sort-tours">
+            <option value="Все туры">Без фильтров</option>
+            <option value="Возрастание рейтинга">По возрастанию рейтинга</option>
+            <option value="Убывание рейтинга">По убыванию рейтинга</option>
+            <option value="Возрастание цены">По возрастанию цены</option>
+            <option value="Убывание цены">По убыванию цены</option>
+          </select>
+        </fieldset>
+      </div>
+    </div>
 
-        <div class="bg-white pb-10">
-            <div
-                class="max-w-5xl m-auto h-full relative flex justify-center px-2"
-            >
-                <div
-                    class="border-4 border-orange-400 rounded absolute -top-6 bg-white w-5/6 sm:w-9/12 md:w-3/5 lg:w-2/5 flex"
-                >
-                    <p
-                        class="option"
-                        id="tour-serch"
-                    >
-                        Выбор страны
-                    </p>
-                    <select class="select" id="list-country">
-                        <option value="Все страны">Все страны</option>
-                        <option value="Египет">Египет</option>
-                        <option value="Индонезия">Индонезия</option>
-                        <option value="Кипр">Кипр</option>
-                        <option value="Мальдивы">Мальдивы</option>
-                        <option value="Мексика">Мексика</option>
-                        <option value="Танзания">Танзания</option>
-                        <option value="Тайланд">Таиланд</option>
-                    </select>
-                </div>
-                <div
-                    class="border-4 border-orange-400 rounded absolute -top-6 bg-white w-5/6 sm:w-9/12 md:w-3/5 lg:w-2/5 flex mt-14"
-                >
-                    <p
-                        class="option"
-                        id="tour-sort"
-                    >
-                        Сортировать
-                    </p>
-                    <select class="select" id="sort-tours">
-                        <option value="Все туры">Все туры</option>
-                        <option value="Возрастание рейтинга">
-                            По возрастанию рейтинга
-                        </option>
-                        <option value="Убывание рейтинга">
-                            По убыванию рейтинга
-                        </option>
-                        <option value="Возрастание цены">
-                            По возрастанию цены
-                        </option>
-                        <option value="Убывание цены">По убыванию цены</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+    <div class="bg-neutral-100 pb-10 min-h-screen">
+      <div class="max-w-5xl m-auto gap-5 py-8 grid grid-cols-1 px-2 relative" id="list-tours"></div>
+    </div>
 
-        <div class="bg-white py-10 min-h-screen">
-            <div
-                class="max-w-5xl m-auto gap-5 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-2 relative"
-                id="list-tours"
-            ></div>
+    <div class="modal" id="modal">
+      <div
+        class="bg-white p-5 w-4/5 xl:w-3/5 rounded-2xl max-h-full overflow-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10"
+        id="add-modal">
+        <div>
+          <p class="text-xl md:text-2xl font-bold">Бронирование тура</p>
+          <div class="rounded-2xl overflow-hidden relative md:hidden h-60 mt-2" id="modal-image-mobile"></div>
+          <div id="modal-content"></div>
+          <form class="flex flex-col gap-3">
+            <fieldset class="fieldset">
+              <legend class="legend">ФИО*</legend>
+              <input class="input" placeholder="Имя и фамилия" required id="customerName" />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="legend">Телефон*</legend>
+              <input class="input" placeholder="8-999-999-99-99" required id="phone" />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="legend">Email*</legend>
+              <input class="input" placeholder="qwerty@gmail.com" required id="email" />
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="legend">Комментарий</legend>
+              <textarea class="textarea" placeholder="Комментарий к бронированию" id="description"></textarea>
+            </fieldset>
+          </form>
+          <p class="text-center pt-2 pb-2 font-medium hidden md:text-base text-xs" id="error-text">
+            Заполните обязательные поля*, чтобы отправить заявку на бронирование.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 pt-5 gap-2 md:gap-5 -mb-2 md:mb-0">
+            <button class="button" id="button-close-modal">Закрыть</button>
+            <div id="buttons"></div>
+          </div>
         </div>
+        <div class="rounded-2xl overflow-hidden relative hidden md:block" id="modal-image"></div>
+      </div>
+    </div>
 
-        <div class="bg-neutral-900/75 fixed top-0 left-0 right-0 bottom-0 hidden justify-center items-center" id="modal">
-            <div class="bg-white md:p-7 w-4/5 xl:w-3/5 rounded max-h-full overflow-auto" id="add-modal">
-                <div class="grid grid-cols-1 md:grid-cols-2 md:pt-3" id="modal-content"></div>
-                <div class="pt-10 pb-5 px-2 sm:px-5">
-                    <p class="text-xl md:text-2xl text-center font-bold text-sky-900">Хотите забронировать данный тур?</p>
-                    <p class="text-lg md:text-xl text-center font-semibold pb-6 text-sky-900">Пожалуйста, заполните форму</p>
-                    <form class="flex flex-col gap-3">
-                        <input class="outline-none border-2 rounded border-sky-700 h-8 px-2 invalid:border-2 invalid:border-orange-500" placeholder="ФИО" required id="customerName">
-                        <input class="outline-none border-2 rounded border-sky-700  h-8 px-2 invalid:border-2 invalid:border-orange-500" placeholder="Телефон" required id="phone">
-                        <input class="outline-none border-2 rounded border-sky-700 h-8 px-2 invalid:border-2 invalid:border-orange-500" placeholder="Email" required id="email">
-                        <textarea class="outline-none border-2 rounded border-sky-700 h-16 px-2" placeholder="Комментарий к бронированию" id="description"></textarea>
-                    </form>
-                    <p class="hidden text-center pt-4 pb-2 text-sky-700 font-medium text-lg" id="error-text">Заполните обязательные поля, чтобы отправить заявку на бронирование.</p>
-                    <div class="grid grid-cols-2 pt-5 gap-5 modal-button">
-                        <button class="btn-modal" id="button-close-modal">Закрыть</button>
-                        <div id="buttons"></div>
-                    </div>
-                </div>
-            </div>
+    <div class="modal" id="modal-ok">
+      <div class="bg-white px-5 py-16 w-4/5 xl:w-1/2 rounded-2xl max-h-full overflow-auto">
+        <div class="flex flex-col items-center">
+          <p class="text-xl sm:text-2xl text-center font-semibold pb-6 text-neutral-900">
+            Ваша заявка успешно отправлена!
+          </p>
+          <button
+            class="bg-cyan-500 hover:bg-cyan-600 px-5 h-10 font-medium rounded-xl text-lg w-3/5 sm:w-1/2"
+            id="button-modal-ok">
+            Ок
+          </button>
         </div>
+      </div>
+    </div>
 
-        <div class="bg-neutral-900/75 fixed top-0 left-0 right-0 bottom-0 hidden justify-center items-center" id="modal-ok">
-            <div class="bg-white p-7 w-4/5 xl:w-3/5 rounded max-h-full overflow-auto">
-                <div class='flex flex-col items-center'>
-                    <p class="text-xl sm:text-2xl text-center font-semibold pb-6 text-sky-900">Ваша заявка успешно отправлена!</p>
-                    <button class="btn-modal w-3/5 sm:w-1/2" id='button-modal-ok'>Ок</button>
-                </div>
-            </div>
+    <div class="bg-cyan-500 py-5 px-2 lg:px-0">
+      <div class="max-w-7xl m-auto h-full flex justify-between w-full">
+        <div>
+          <img src="/images/Logo-footer.svg" />
         </div>
-
-        <div class="bg-sky-700">
-            <div
-                class="max-w-5xl m-auto h-full px-2 flex flex-col justify-between text-orange-50"
-            >
-                <div class="flex flex-col pt-5">
-                    <a class="cursor-pointer hover:underline"
-                        >Правила и условия</a
-                    >
-                    <a class="cursor-pointer hover:underline"
-                        >Разрешение споров</a
-                    >
-                    <a class="cursor-pointer hover:underline"
-                        >Как мы работаем</a
-                    >
-                    <a class="cursor-pointer hover:underline"
-                        >Положение о конфиденциальности и cookie</a
-                    >
-                    <a class="cursor-pointer hover:underline"
-                        >Служба поддержки</a
-                    >
-                </div>
-                <div class="grid justify-items-end py-5">
-                    <p>2022–2023 © TRAVEL CLUB</p>
-                    <p>info@travel-club.com</p>
-                </div>
-            </div>
+        <div class="flex flex-col text-neutral-700 text-sm text-end gap-1">
+          <a class="cursor-pointer hover:text-black">Правила и условия</a>
+          <a class="cursor-pointer hover:text-black">Разрешение споров</a>
+          <a class="cursor-pointer hover:text-black">Как мы работаем</a>
+          <a class="cursor-pointer hover:text-black">Положение о конфиденциальности и cookie</a>
+          <a class="cursor-pointer hover:text-black">Служба поддержки</a>
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
