@@ -2,7 +2,7 @@
 
 Сайт туристической компании
 
-[Сcылка на проект на Netlify](https://travel-club.netlify.app)
+[Сcылка на проект на Netlify](https://golobe-site.netlify.app)
 
 ### Функциональность
 
