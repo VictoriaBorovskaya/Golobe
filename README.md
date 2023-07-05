@@ -27,7 +27,7 @@
 
 ## Инструкция по развертныванию проекта
 
-- git clone https://github.com/VictoriaBorovskaya/Travel-Company.git
+- git clone https://github.com/VictoriaBorovskaya/Golobe.git
 - cd Travel-Company
 - yarn install
 - yarn dev
