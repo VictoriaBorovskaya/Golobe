@@ -28,6 +28,6 @@
 ## Инструкция по развертныванию проекта
 
 - git clone https://github.com/VictoriaBorovskaya/Golobe.git
-- cd Travel-Company
+- cd Golobe
 - yarn install
 - yarn dev
